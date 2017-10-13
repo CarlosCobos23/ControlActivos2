@@ -59,6 +59,7 @@ class ItemsTable extends Table
         $this->hasMany('Stocks', [
             'foreignKey' => 'item_id'
         ]);
+        $this->belongsTo('Suppliers');
     }
 
     /**

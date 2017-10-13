@@ -23,6 +23,16 @@
             echo $this->Form->control('unit_cost');
             echo $this->Form->control('brand_id', ['options' => $brands, 'empty' => true]);
         ?>
+        <p></p>
+        <div ><h3>Datos de la Factura</h3></div>
+        <?php 
+
+            echo $this->Form->control('factura');
+            echo $this->Form->control('proveedor',['options' => $suppliers,'empty' => true]);
+            echo $this->Form->control('pdf',['type' => 'file']);
+            echo $this->Form->control('xml',['type' => 'file']);
+            echo $this->Form->control('orden_de_compra');
+        ?>
 
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
