@@ -5,10 +5,10 @@
 ?>
 
 <div class="items form">
-	<h3><?= __('Add Item') ?></h3>
+	<h3><?= __('Add Item') ?></h3><br>
 	<div class="actions">
 		<ul>
-			<li><?= $this->Html->link(__('List Items'), ['action' => 'index'], ['class' => 'test']) ?></li>
+			<!--<li><?= $this->Html->link(__('List Items'), ['action' => 'index'], ['class' => 'opciones-btn']) ?></li>-->
 		</ul>
 	</div>
 
@@ -40,7 +40,7 @@
 </div>
 
 
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="left-nav">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Items'), ['action' => 'index']) ?></li>
