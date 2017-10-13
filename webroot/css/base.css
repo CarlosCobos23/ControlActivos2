@@ -431,52 +431,42 @@ ul.pagination li {
 }
 
 /*  */
+
+.left-nav{
+  margin-left: 3%;
+  margin-top: 7%;
+}
+
 .side-nav {
-    display: block;
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    list-style-position: outside;
     list-style-type: none;
     margin: 0;
-    padding: 0.875rem 0
+    color: #008CBA;
+    margin: -5% 0% -3% 0%;
 }
 .side-nav li {
     font-size: 0.875rem;
     font-weight: normal;
     margin: 0 0 0.4375rem 0;
-	float: left;
 }
 
-.side-nav li a:not(.button) {
+.side-nav li a {
     color: #008CBA;
-    display: block;
     margin: 0;
     padding: 0.4375rem 0.875rem
 }
-.side-nav li a:not(.button):hover,
-.side-nav li a:not(.button):focus {
+.side-nav li a:hover {
     background: rgba(0, 0, 0, 0.025);
     color: #1cc7ff
 }
-.side-nav li a:not(.button):active {
-    color: #1cc7ff
-}
-.side-nav li.active>a:first-child:not(.button) {
-    color: #1cc7ff;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: normal
-}
-.side-nav li.divider {
-    border-top: 1px solid;
-    height: 0;
-    list-style: none;
-    padding: 0;
-    border-top-color: #e6e6e6
-}
+
+
 .side-nav li.heading {
     color: #008CBA;
-    font-size: 0.875rem;
+    font-size: 1.875rem;
     font-weight: bold;
-    text-transform: uppercase
+    text-transform: uppercase;
+    display: inline;
 }
 
 fieldset {
@@ -1030,6 +1020,9 @@ ul.topnavPageR li a:hover {
 	border-left: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
 	padding: 10px 10px;
+  width: 50%;
+  float: right;
+  margin-right: 30%;
 }
 .vertical-table {
 	background: #F9F9F9;
