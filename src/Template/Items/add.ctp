@@ -5,23 +5,35 @@
 ?>
 
 <div class="items form">
-	<h3><?= __('Add Item') ?></h3>
+	<h3 class="title-page"><?= __('Add Item') ?></h3><br>
 	<div class="actions">
 		<ul>
-			<li><?= $this->Html->link(__('List Items'), ['action' => 'index'], ['class' => 'test']) ?></li>
+			<!--<li><?= $this->Html->link(__('List Items'), ['action' => 'index'], ['class' => 'opciones-btn']) ?></li>-->
 		</ul>
 	</div>
 
 	<div class="editdata">
     <?= $this->Form->create($item) ?>
         <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('itemcategory_id', ['options' => $itemcategories, 'empty' => true]);
-            echo $this->Form->control('currency_id', ['options' => $currencies, 'empty' => true]);
-            echo $this->Form->control('model');
-            echo $this->Form->control('color');
-            echo $this->Form->control('unit_cost');
-            echo $this->Form->control('brand_id', ['options' => $brands, 'empty' => true]);
+
+						echo $this->Form->control('name', ['label' => 'Nombre']);
+            echo $this->Form->control('itemcategory_id', ['label' => 'Familia'], ['options' => $itemcategories, 'empty' => true]);
+            echo $this->Form->control('currency_id', ['label' => 'Moneda'], ['options' => $currencies, 'empty' => true]);
+            echo $this->Form->control('model', ['label' => 'Modelo']);
+            echo $this->Form->control('color', ['label' => 'Color']);
+            echo $this->Form->control('unit_cost', ['label' => 'Costo Unitario']);
+            echo $this->Form->control('brand_id', ['label' => 'Marca'], ['options' => $brands, 'empty' => true]);
+        ?>
+
+        <h3>Datos de la Factura</h3>
+        <?php
+
+            echo $this->Form->control('factura', ['label' => 'Factura']);
+            echo $this->Form->control('proveedor', ['label' => 'Proveedor'], ['options' => $suppliers,'empty' => true]);
+						echo $this->Form->control('orden_de_compra', ['label' => 'Orden de Compra']);
+						echo $this->Form->control('pdf', ['type' => 'file']);
+            echo $this->Form->control('xml', ['type' => 'file']);
+
         ?>
 
     <?= $this->Form->button(__('Submit')) ?>
@@ -30,8 +42,8 @@
 </div>
 
 
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<nav class="left-nav">
+    <ul>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Items'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Itemcategories'), ['controller' => 'Itemcategories', 'action' => 'index']) ?></li>

@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\ORM\TableRegistry;
 /**
  * Items Controller
  *
@@ -18,6 +18,8 @@ class ItemsController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
+
+
     public function index()
     {
         $this->paginate = [
@@ -53,6 +55,7 @@ class ItemsController extends AppController
      */
     public function add()
     {
+        
         $item = $this->Items->newEntity();
         if ($this->request->is('post')) {
             $item = $this->Items->patchEntity($item, $this->request->getData());
@@ -66,6 +69,9 @@ class ItemsController extends AppController
         $itemcategories = $this->Items->Itemcategories->find('list', ['limit' => 200]);
         $currencies = $this->Items->Currencies->find('list', ['limit' => 200]);
         $brands = $this->Items->Brands->find('list', ['limit' => 200]);
+        $suppliers = $this->Items->Suppliers->find('list' , ['limit' => 200]);
+        $this->set('suppliers',$suppliers);
+        echo (string)$suppliers;
         $this->set(compact('item', 'itemcategories', 'currencies', 'brands'));
         $this->set('_serialize', ['item']);
     }
@@ -94,6 +100,7 @@ class ItemsController extends AppController
         $itemcategories = $this->Items->Itemcategories->find('list', ['limit' => 200]);
         $currencies = $this->Items->Currencies->find('list', ['limit' => 200]);
         $brands = $this->Items->Brands->find('list', ['limit' => 200]);
+        $suppliers = $this->Items->Suppliers->find('list' , ['limit' => 200]);
         $this->set(compact('item', 'itemcategories', 'currencies', 'brands'));
         $this->set('_serialize', ['item']);
     }
