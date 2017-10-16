@@ -9095,3 +9095,10 @@ font-weight: lighter;
 .side-nav ul{
   display: block;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: -.9%;
+}

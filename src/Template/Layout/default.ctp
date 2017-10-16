@@ -164,9 +164,23 @@ $cakeDescription = 'TONI TI: HelpDesk & Asset Management';
 	  <div id="logo" class="left">PORTAL TI</div>
 	  <div class="right">
 			<ul class="headernav">
-				<li><a href="" class="blink bgalert"><i class="fa fa-bell-o" aria-hidden="true"></i> (13)</a></li>
+
+
+
+    <li><a href="" class="blink bgalert"><i class="fa fa-bell-o" aria-hidden="true"></i> (13)</a></li>
+
 				<li><a href=""><i class="fa fa-graduation-cap" aria-hidden="true"></i> Conocimiento</a></li>
-				<li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i> Julio Perea Pastrana</a></li>
+
+
+  <div class="dropdown">
+        <li><a href=""><i class="fa fa-user-circle" aria-hidden="true onclick="  ></i> Julio Perea Pastrana</a></li>
+
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+</div>
 			</ul>
 	  </div>
 	</div>
@@ -183,9 +197,10 @@ $cakeDescription = 'TONI TI: HelpDesk & Asset Management';
 	</div>
 
 
-
-
 </body>
+
+
+
 <script>
       function doSearch(value,name){
           alert('You input: ' + value+'('+name+')');
@@ -200,4 +215,30 @@ $cakeDescription = 'TONI TI: HelpDesk & Asset Management';
     document.getElementById("mySidenav").style.width = "0";
     }
   </script>
+
+
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+
+
 </html>
